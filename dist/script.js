@@ -74,6 +74,19 @@ function getProductId() {
     return parseInt(params.get('id'), 10);
 }
 
+function changeBgColor(element) {
+    // Reset background color for all pagination buttons
+    const buttons = document.querySelectorAll('#pagination li');
+    buttons.forEach(button => {
+        button.classList.remove('bg-blue-500', 'text-white');
+        button.classList.add('bg-gray-100', 'text-gray-800');
+    });
+
+    // Set background color for the clicked button
+    element.classList.remove('bg-gray-100', 'text-gray-800');
+    element.classList.add('bg-blue-500', 'text-white');
+}
+
 // Function to Display Product Details
 function displayProductDetails() {
     const productId = getProductId();
