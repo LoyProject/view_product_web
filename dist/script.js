@@ -69,7 +69,7 @@ function nextPage() {
 }
 
 // Function to Fetch Product ID from URL
-function getProductId() {
+function getProductId() { 
     const params = new URLSearchParams(window.location.search);
     return parseInt(params.get('id'), 10);
 }
