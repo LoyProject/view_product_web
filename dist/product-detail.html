@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <title>Loy Team</title>
+    <title>Product Detail - Loy Team</title>
 </head>
+
 <body class="bg-gray-100">
     <!-- header -->
     <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between sticky top-0 z-50">
@@ -16,13 +18,12 @@
                 <img class="h-10 inline"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Motul_logo.svg/1280px-Motul_logo.svg.png">
             </span>
-    
+
             <span class="text-3xl cursor-pointer mx-2 md:hidden block">
                 <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
             </span>
         </div>
-        <ul
-            class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
             <li class="mx-4 my-6 md:my-0">
                 <a href="#" class="text-xl hover:text-cyan-500 duration-500">PRODUCTS</a>
             </li>
@@ -36,12 +37,95 @@
     </nav>
     <!-- header -->
 
-    <div id="productDetail" class="p-6">
-    </div>
-    
+    <!-- Product Detail Section -->
+    <div id="productDetail"
+        class="max-w-4xl mx-auto mt-10 bg-gradient-to-br from-gray-50 to-white shadow-md rounded-xl p-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Product Image Section -->
+            <div class="md:col-span-5 flex justify-center items-center">
+                <div class="relative">
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
+                        <img id="productImage" src="https://via.placeholder.com/500" alt="Product Image"
+                            class="w-84 h-84 object-contain">
+                    </div>
+                    <div
+                        class="absolute top-4 right-4 bg-red-500 text-white font-semibold text-xs px-4 py-1 rounded-full shadow">
+                        Best Seller
+                    </div>
+                </div>
+            </div>
 
+            <!-- Product Details Section -->
+            <div class="md:col-span-7 flex flex-col justify-top">
+                <!-- Product Title -->
+                <h1 id="productTitle" class="text-4xl font-bold text-gray-800 leading-snug">
+                    Premium Product Title
+                </h1>
+
+                <!-- Ratings and Reviews -->
+                <div class="flex items-center mt-4 space-x-2">
+                    <div class="flex text-red-500">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <p class="text-gray-600">(4.5/5 - 120 Reviews)</p>
+                </div>
+
+                <!-- Product Description -->
+                <p id="productDescription" class="text-lg text-gray-600 mt-6">
+                    Loading product description...
+                </p>
+
+                <!-- Additional Information -->
+                <div class="mt-12">
+                    <h2 class="text-xl font-semibold text-gray-700">Why Choose Us?</h2>
+                    <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-600">
+                        <li>High-quality and durable materials.</li>
+                        <li>Exceptional customer satisfaction ratings.</li>
+                        <li>Affordable pricing for premium quality.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Detail Section -->
+
+    <!-- Related Products Section -->
+        <section class="py-10 px-20 justify-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Related Products</h2>
+            <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white py-6 mt-10">
+        <div class="w-[92%] mx-auto text-center">
+            <div class="mb-4">
+                <p>&copy; 2024 Loy Team. All rights reserved.</p>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <!-- Social Media Icons -->
+                <a href="#" class="text-white hover:text-gray-300">
+                    <ion-icon name="logo-facebook" class="text-2xl"></ion-icon>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <ion-icon name="logo-twitter" class="text-2xl"></ion-icon>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <ion-icon name="logo-linkedin" class="text-2xl"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
 
     <script src="script.js"></script>
-     
+
 </body>
+
 </html>
