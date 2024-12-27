@@ -115,10 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-function addToCart() {
-    alert("Product added to cart!");
-}
-
 //const modal = document.getElementById('contactModal');
 function toggleModal(modalId) {
     const modal = document.getElementById(modalId);
