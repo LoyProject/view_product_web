@@ -16,9 +16,9 @@ const products = [
     { id: 7, title: "Product 7", description: "Description for product 7", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112650_AUTO%2520COOL%2520G12%2520EVO%2520-37%25C2%25B0C%252012X1L_png.png&w=1080&q=75" },
     { id: 8, title: "Product 8", description: "Description for product 8", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112650_AUTO%2520COOL%2520G12%2520EVO%2520-37%25C2%25B0C%252012X1L_png.png&w=1080&q=75" },
     { id: 9, title: "Product 9", description: "Description for product 9", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL-110926-Injector-Cleaner-Diesel-1L_png.png&w=1080&q=75" },
-    { id: 1, title: "Product 10", description: "Description for product 10", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112828_AUTO%2520COOL%2520ESSENTIAL%25204X5L_png.png&w=1080&q=75" },
-    { id: 2, title: "Product 11", description: "Description for product 11", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112828_AUTO%2520COOL%2520ESSENTIAL%25204X5L_png.png&w=1080&q=75" },
-    { id: 3, title: "Product 12", description: "Description for product 12", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112650_AUTO%2520COOL%2520G12%2520EVO%2520-37%25C2%25B0C%252012X1L_png.png&w=1080&q=75" },
+    { id: 10, title: "Product 10", description: "Description for product 10", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112828_AUTO%2520COOL%2520ESSENTIAL%25204X5L_png.png&w=1080&q=75" },
+    { id: 11, title: "Product 11", description: "Description for product 11", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112828_AUTO%2520COOL%2520ESSENTIAL%25204X5L_png.png&w=1080&q=75" },
+    { id: 12, title: "Product 12", description: "Description for product 12", image: "https://www.motul.com/_next/image?url=https%3A%2F%2Fazupim01.motul.com%2Fmedia%2FmotulData%2FIM%2Fbigweb%2FMOTUL_112650_AUTO%2520COOL%2520G12%2520EVO%2520-37%25C2%25B0C%252012X1L_png.png&w=1080&q=75" },
 ];
 
 // Reference to the Product Grid Container
@@ -107,11 +107,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // If product is found, update the product detail page
     if (product) {
-        document.getElementById('productTitle').textContent = product.title;
-        document.getElementById('productDescription').textContent = product.description;
-        document.getElementById('productImage').src = product.image;
+        const productTitle = document.getElementById('productTitle');
+        const productDescription = document.getElementById('productDescription');
+        const productImage = document.getElementById('productImage');
+        if (productTitle) productTitle.textContent = product.title;
+        if (productDescription) productDescription.textContent = product.description;
+        if (productImage) productImage.src = product.image;
     } else {
-        document.getElementById('productDetail').innerHTML = '<p>Product not found.</p>';
+        const productDetail = document.getElementById('productDetail');
+        if (productDetail) productDetail.innerHTML = '<p>Product not found.</p>';
     }
 });
 

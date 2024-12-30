@@ -153,21 +153,6 @@
 
     <script src="script.js"></script>
 
-    <div id="data-container" class="p-4 bg-white shadow-md rounded-lg"></div>
-    <script>
-        fetch('http://localhost:3000/')
-            .then(response => response.json())
-            .then(data => {
-            const container = document.getElementById('data-container');
-            container.innerHTML = data.map(item => `
-                <div class="p-2 border-b">
-                <p class="text-lg font-semibold">${item.column_name}</p>
-                <p class="text-gray-500">${item.other_column}</p>
-                </div>
-            `).join('');
-            });
-    </script>
-
     <!-- Pagination -->
     <ul id="pagination" class="py-10 px-5 flex space-x-5 justify-center font-[sans-serif]">
         <li class="flex items-center justify-center shrink-0 border hover:border-blue-500 w-9 h-9 rounded-md"
